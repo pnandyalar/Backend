@@ -14,7 +14,7 @@ const validateSchema = Joi.object({
     ID: Joi.string(), 
     FirstName:Joi.string().required(), 
     LastName:Joi.string().required(), 
-    Email:Joi.string().email(),
+    Email:Joi.string().email().allow(''),
     Contact:Joi.number().required(), 
     JoiningDate:Joi.string().required(), 
     EmployeeID:Joi.string().allow(''), 
@@ -25,8 +25,7 @@ const validateSchema = Joi.object({
     Gender:Joi.string().required(), 
     MaritalStatus:Joi.string().required(), 
     Password:Joi.string().allow('')
-    // .optional(), 
-    // ConfirmPassword:Joi.string().required(), 
+    
 })
 //=================MIDDLEWARE FOR VALIDATION===========================
 
